@@ -1,0 +1,29 @@
+{
+  "name": "sugar-reminder",
+  "version": "1.0.0",
+  "description": "Программа напоминания об измерении сахара",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.sugar.reminder",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Напоминание о сахаре"
+    }
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^26.8.1",
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
